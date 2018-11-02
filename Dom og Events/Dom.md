@@ -18,6 +18,9 @@ How to access:
     The <ul> DOM node?
     The second <li> (with Pete)?
 
+Lausn:
+
+
 There are many ways, for instance:
  
 The <div> DOM node:
