@@ -8,15 +8,15 @@
 <body>
 <script>
 const pressed = [];
-const secretCode = 'wesbos';
+const secretCode = 'wesbos';°// lenyi
 
 window.addEventListener('keyup', (e) => {
   console.log(e.key);
   pressed.push(e.key);
-  pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
-  if (pressed.join('').includes(secretCode)) {
-    console.log('DING DING!');
-    cornify_add();
+  pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length); // skera niður svo að maður er bara að leita af 6 stöfum
+  if (pressed.join('').includes(secretCode)) { // ef allt er rett 
+    console.log('DING DING!'); // ef skrifað wesbos þa kemur 
+    cornify_add(); // addar ester egg unicorn og regnbogar
   }
   console.log(pressed);
 });
