@@ -60,22 +60,22 @@
 <script>
   function removeTransition(e) {
     if (e.propertyName !== 'transform') return;
-    e.target.classList.remove('playing');
+    e.target.classList.remove('playing'); // endar animation
   }
 
   function playSound(e) {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); // tekur inn alla keys 
     const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-    if (!audio) return;
+    if (!audio) return; // ef ytt á rettan key þa kemur hjloð með 
 
-    key.classList.add('playing');
-    audio.currentTime = 0;
-    audio.play();
+    key.classList.add('playing'); // addar css class sem heitir playing
+    audio.currentTime = 0; // hraði er 0 svo maður getur gert nonstop
+    audio.play(); 
   }
 
   const keys = Array.from(document.querySelectorAll('.key'));
-  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-  window.addEventListener('keydown', playSound);
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition)); //kallar á fallið fyrir ofan 
+  window.addEventListener('keydown', playSound); // herna er keydown 
 </script>
 
 
